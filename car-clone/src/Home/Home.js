@@ -28,7 +28,7 @@ class Home extends Component {
                 current++
                 this.setState({currPageIndex: current})}
         } else if (this.state.oncePerWheel % 2 === 0  && e.deltaY < 0){
-            if(this.state.currPageIndex === 0){
+            if(this.state.currPageIndex === 1){
                return null
             } else { 
                 let current = this.state.currPageIndex
@@ -39,7 +39,6 @@ class Home extends Component {
 
     render() {
         const {currPage, currPageIndex} = this.state
-        console.log(currPage[currPageIndex])
 
         return ( 
             <div style = {{position: 'relative', height: '100vh'}}>
