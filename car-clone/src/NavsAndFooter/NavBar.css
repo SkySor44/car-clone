@@ -1,0 +1,63 @@
+.navbar-contain {
+    height: 83px;
+    width: 100vw;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-section-edge {
+    width: 45%;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    height: 55px;
+    width: auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: none;
+    align-items: center;
+}
+
+.burger {
+    height: 4px;
+    width: 30px;
+    background-color: black;
+
+}
+
+.burger-contain {
+    height: 30px;
+    padding: 0px 30px;
+}
+
+.red-text {
+    margin-right: 5px;
+    color: #d5001c;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-size: 23px;
+}

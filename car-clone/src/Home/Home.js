@@ -41,9 +41,9 @@ class Home extends Component {
         const {currPage, currPageIndex} = this.state
 
         return ( 
-            <div style = {{position: 'relative', height: '100vh'}}>
+            <div style = {{position: 'relative', width: '100vw'}}>
             <Throttle time = "1500" handler = "onWheel">
-                <div onWheel = {(e) => this.changeView(e)} style = {{height: '100%', width: '100%', position: 'absolute'}}>
+                <div onWheel = {(e) => this.changeView(e)} style = {{height: 'calc(100vh - 85px)', width: '100%', position: 'absolute'}}>
 
                 </div>
             </Throttle>
