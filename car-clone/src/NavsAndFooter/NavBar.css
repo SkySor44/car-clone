@@ -46,12 +46,21 @@
     height: 4px;
     width: 30px;
     background-color: black;
+    transition: all .3s ease-out;
 
 }
 
 .burger-contain {
     height: 30px;
     padding: 0px 30px;
+    transition: all .3s ease-out;
+    cursor: pointer;
+
+}
+
+.burger-contain:hover .burger {
+    background: #d5001c;
+    transition: all .3s;
 }
 
 .red-text {
@@ -60,4 +69,96 @@
     letter-spacing: -1px;
     font-weight: bold;
     font-size: 23px;
+}
+
+.share {
+    font-size: 30px;
+    padding: 0px 30px;
+    position: absolute;
+}
+
+.social-drawer {
+    width: 128px;
+    height: 83px;
+    right: -200px;
+    background: black;
+    position: absolute;
+}
+
+.share-contain {
+    height: 83px;
+    width: 128px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .3s ease-out;
+}
+
+.open-link {
+    color: black;
+    font-size: 15px;
+}
+
+
+.share-contain:hover .social-drawer {
+    display: flex;
+    z-index: 20;
+    right: 0;
+}
+
+.share-contain:hover {
+    margin-left: 30px;
+    transition: all .3s
+}
+
+.twitter, .facebook {
+    color: white;
+    font-size: 28px;
+}
+
+a svg {
+    transition: all .3s ease-out;
+}
+
+a svg:hover {
+    color: #d5001c;
+    transition: all .3s;
+}
+
+.social-drawer a {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+}
+
+.nav-tabs {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-tabs a {
+    margin-right: 30px;
+    list-style-type: none;
+    font-size: 13px;
+    font-weight: 100;
+    color: #282828;
+    letter-spacing: .1px;
+    text-decoration: none;
+}
+
+.open-link {
+    display: none;
+}
+
+.nav-tabs a:hover {
+    color: #d5001c;
+    transition: .3s;
+    font-weight: 300;
+}
+
+.no-margin {
+    margin-right: 0px !important;
 }
