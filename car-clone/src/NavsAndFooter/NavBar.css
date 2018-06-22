@@ -6,27 +6,58 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    z-index: 3;
+    position: relative;
+    background: white;
+
+}
+
+
+.dropdown {
+    background: #121212;
+    width: 100%;
+    height: calc(100vh - 83px);
+    position: absolute;
+    top: -150vh;
+    left: 0;
+    z-index: 2;
+    margin-top: 83px;
+    transition: all .3s ease;
+
+}
+
+.opened {
+    top: 0;
+    transition: all .3s ease;
 }
 
 .nav-section-edge {
     width: 45%;
+    z-index: 3;
+
 }
 
 .left {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 3;
+
 }
 
 .right {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 3;
+
 }
 
 .logo {
     height: 55px;
     width: auto;
+    z-index: 3;
+
 }
 
 .flex-column {
@@ -34,12 +65,16 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    z-index: 3;
+
 }
 
 .flex-row {
     display: flex;
     flex-wrap: none;
     align-items: center;
+    z-index: 3;
+
 }
 
 .burger {
@@ -47,7 +82,7 @@
     width: 30px;
     background-color: black;
     transition: all .3s ease-out;
-
+    z-index: 3;
 }
 
 .burger-contain {
@@ -55,13 +90,45 @@
     padding: 0px 30px;
     transition: all .3s ease-out;
     cursor: pointer;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 
 }
+
+.top-burger, .middle-burger, .bottom-burger {
+    transition: all .3s ease-out;
+  
+}
+
+
 
 .burger-contain:hover .burger {
     background: #d5001c;
     transition: all .3s;
 }
+
+.top-burger-animate {
+    transform-origin: 0%;
+    transform: rotate(45deg);
+    transition: all .3s ease;
+    margin-bottom: 6px;
+}
+
+.middle-burger-animate {
+    transition: all .3s ease-out;
+    display: none;
+}
+
+.bottom-burger-animate {
+    transform-origin: 0%;
+    transform: rotate(-45deg);
+    transition: all .3s ease;
+    margin-top: 6px;
+}
+
 
 .red-text {
     margin-right: 5px;
@@ -69,12 +136,16 @@
     letter-spacing: -1px;
     font-weight: bold;
     font-size: 23px;
+    z-index: 3;
+
 }
 
 .share {
     font-size: 30px;
     padding: 0px 30px;
     position: absolute;
+    z-index: 3;
+
 }
 
 .social-drawer {
@@ -83,6 +154,8 @@
     right: -200px;
     background: black;
     position: absolute;
+    z-index: 3;
+
 }
 
 .share-contain {
@@ -93,18 +166,33 @@
     justify-content: space-around;
     align-items: center;
     transition: all .3s ease-out;
+    z-index: 3;
+
 }
 
 .open-link {
-    color: black;
-    font-size: 15px;
+    color: white; 
+    font-size: 12px;
+    z-index: 3;
+    margin-right: 2px;
 }
 
 
 .share-contain:hover .social-drawer {
     display: flex;
-    z-index: 20;
+    z-index: 30;
     right: 0;
+    transition: all .3s;
+}
+
+.share-contain .social-drawer {
+    transition: all .3s ease-out;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    z-index: 3;
+
 }
 
 .share-contain:hover {
@@ -115,10 +203,14 @@
 .twitter, .facebook {
     color: white;
     font-size: 28px;
+    z-index: 3;
+
 }
 
 a svg {
     transition: all .3s ease-out;
+    z-index: 3;
+
 }
 
 a svg:hover {
@@ -128,15 +220,21 @@ a svg:hover {
 
 .social-drawer a {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     width: 50%;
     align-items: center;
+    flex-wrap: nowrap;
+    z-index: 3;
+
 }
 
 .nav-tabs {
     display: flex;
     align-items: center;
     text-align: center;
+    z-index: 3;
+
 }
 
 .nav-tabs a {
@@ -147,11 +245,10 @@ a svg:hover {
     color: #282828;
     letter-spacing: .1px;
     text-decoration: none;
+    z-index: 3;
+
 }
 
-.open-link {
-    display: none;
-}
 
 .nav-tabs a:hover {
     color: #d5001c;
@@ -159,6 +256,36 @@ a svg:hover {
     font-weight: 300;
 }
 
+.external1 {
+    transition: all .3s ease-out;
+}
+
+.link1:hover .external1 {
+    color: black;
+    transition: all .3s ease;
+}
+
+.external2 {
+    transition: all .3s ease-out;
+}
+
+.link2:hover .external2 {
+    color: black;
+    transition: all .3s ease;
+}
+
+.external3 {
+    transition: all .3s ease-out;
+}
+
+.link3:hover .external3 {
+    color: black;
+    transition: all .3s ease;
+}
+
+
 .no-margin {
     margin-right: 0px !important;
+    z-index: 3;
+
 }

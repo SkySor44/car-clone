@@ -13,11 +13,27 @@ class NavBar extends Component {
 
          }
     }
+
+    toggleMenu(){
+        if(document.querySelector('.dropdown').classList[1] === undefined){
+            document.querySelector('.dropdown').classList.add('opened')
+            document.querySelector('.topBurger').classList.add('top-burger-animate')
+            document.querySelector('.middleBurger').classList.add('middle-burger-animate')
+            document.querySelector('.bottomBurger').classList.add('bottom-burger-animate')
+        } else {
+            document.querySelector('.dropdown').classList.remove('opened')
+            document.querySelector('.topBurger').classList.remove('top-burger-animate')
+            document.querySelector('.middleBurger').classList.remove('middle-burger-animate')
+            document.querySelector('.bottomBurger').classList.remove('bottom-burger-animate')
+        }
+    }
+
     render() { 
         return ( 
+            <div>
             <div className = "navbar-contain">
                 <div className = "nav-section-edge left">
-                    <div className = "flex-column burger-contain">
+                    <div className = "flex-column burger-contain" onClick = {() => this.toggleMenu()}>
                         <div className = "topBurger burger"></div>
                         <div className = "middleBurger burger"></div>
                         <div className = "bottomBurger burger"></div>
@@ -32,9 +48,19 @@ class NavBar extends Component {
                 </div>
                 <div className = "nav-section-edge right">
                     <ul className = "nav-tabs">
-                        <a target = "_blank" href = "https://www.porsche.com/usa/modelstart/"><FaExternalLink className = "open-link"/>Build Your Own</a>
-                        <a target = "_blank" href = "https://www.porsche.com/usa/inventorysearch/"><FaExternalLink className = "open-link"/>Search Inventory</a>
-                        <a target = "_blank" href = "https://www.porsche.com/usa/dealersearch/" className = "no-margin"><FaExternalLink className = "open-link"/>Find a Dealer</a>
+                    <div className = "link1">
+                        <FaExternalLink className = "open-link external1"/>
+                        <a target = "_blank" href = "https://www.porsche.com/usa/modelstart/">Build Your Own</a>
+                    </div>
+                    <div className = "link2">
+                        <FaExternalLink className = "open-link external2"/>
+                        <a target = "_blank" href = "https://www.porsche.com/usa/inventorysearch/">Search Inventory</a>
+                    </div>
+                    <div className = "link3">
+                        <FaExternalLink className = "open-link external3"/>
+                        <a target = "_blank" href = "https://www.porsche.com/usa/dealersearch/" className = "no-margin">Find a Dealer</a>
+                    </div>
+                        
                     </ul>
                     <div className = "share-contain">
                     <IoAndroidShareAlt className = "share"/>
@@ -46,6 +72,11 @@ class NavBar extends Component {
 
                 </div>
             </div>
+                            <div className = "dropdown">
+
+                            </div>
+            </div>
+
          )
     }
 }
