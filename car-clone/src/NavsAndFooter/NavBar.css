@@ -97,6 +97,100 @@
     position: absolute;
 }
 
+.nine-eleven {
+    display: none;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+@keyframes fade-in {
+    0% {opacity: 0}
+    50% {opacity: .5}
+    100% {opacity: 1}
+}
+
+.hovered-nine {
+    display: block;
+    animation-name: fade-in;
+    animation-duration: .4s;
+    transition: all .6s ease;
+    opacity: 1;
+}
+
+@keyframes drive-in-t {
+    0% {left: -80px}
+    10% {left: -56px}
+    20% {left: -32px}
+    30% {left: -8px}
+    40% {left: 16px}
+    50% {left: 40px}
+    60% {left: 64px}
+    70% {left: 88px}
+    80% {left: 112px}
+    90% {left: 136px}
+    100% {left: 160px}
+
+}
+@keyframes drive-in-carrera {
+    0% {left: -80px}
+    25% {left: -15px}
+    50% {left: -30px}
+    75% {left: -5px}
+    100% {left: 20px}
+
+}
+@keyframes drive-in-gts {
+    0% {left: -80px}
+    25% {left: 15px}
+    50% {left: 110px}
+    75% {left: 205px}
+    100% {left: 300px}
+
+}
+@keyframes drive-in-turbo {
+    0% {left: -80px}
+    10% {left: -28px}
+    20% {left: 24px}
+    30% {left: 76px}
+    40% {left: 128px}
+    50% {left: 180px}
+    60% {left: 232px}
+    70% {left: 284px}
+    80% {left: 336px}
+    90% {left: 388px}
+    100% {left: 440px}
+
+}
+
+
+.hovered-nine-for-carrera {
+    transition: all .4s ease;
+    animation-name: drive-in-carrera;
+    animation-duration: .4s;
+    left: 20px;
+
+}
+.hovered-nine-for-t {
+    transition: all .4s ease;
+    animation-name: drive-in-t;
+    animation-duration: .4s;
+    left: 160px;
+
+}
+.hovered-nine-for-gts {
+    transition: all .4s ease;
+    animation-name: drive-in-gts;
+    animation-duration: .4s;
+    left: 300px;
+
+}
+.hovered-nine-for-turbo {
+    transition: all .4s ease;
+    animation-name: drive-in-turbo;
+    animation-duration: .4s;
+    left: 440px;
+}
+
 .dropdown-cars-contain h2 {
     display: flex;
     flex-direction: column;
@@ -136,8 +230,8 @@
 }
 
 .nine-carrera {
-    left: 20px;
     position: absolute;
+    transition: all .6s ease;
 }
 
 .nine-t .car-image{
@@ -149,8 +243,8 @@
 
 .nine-t {
     position: absolute;
-    left: 150px;
     top: 120px;
+    transition: all .6s ease;
 }
 
 .nine-gts .gradient-border{
@@ -171,8 +265,8 @@
 
 .nine-gts {
     position: absolute;
-    left: 280px;
     top: 240px;
+    transition: all .6s ease;
 }
 
 .nine-turbo .gradient-border{
@@ -193,8 +287,8 @@
 
 .nine-turbo {
     position: absolute;
-    left: 410px;
     top: 360px;
+    transition: all .6s ease;
 }
 
 .nine-t .gradient-border{
