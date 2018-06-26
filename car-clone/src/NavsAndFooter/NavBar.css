@@ -23,7 +23,7 @@
     z-index: 2;
     margin-top: 83px;
     transition: all .5s ease;
-    overflow: auto;
+    overflow-y: scroll;
     display: flex;
     align-items: flex-start;
 
@@ -33,6 +33,7 @@
 .dropdown-nav {
     width: 28%;
     height: auto;
+    transition: all .6s ease-out;
 
 }
 
@@ -51,6 +52,7 @@
     max-width: 240px;
     margin-bottom: 30px;
 }
+
 
 .dropdown-nav div a:hover svg {
     fill: #d5001c;
@@ -95,25 +97,35 @@
     top: 50px;
     right:0px;
     position: absolute;
+    transition: all .6s ease-out;
+
 }
 
-.nine-eleven {
+.nine-eleven, .seven-eighteen {
     display: none;
-    opacity: 0;
-    transition: all .4s ease;
+    transition: all .6s ease-out;
 }
+
 
 @keyframes fade-in {
     0% {opacity: 0}
+    10% {opacity: .1}
+    20% {opacity: .2}
+    30% {opacity: .3}
+    40% {opacity: .4}
     50% {opacity: .5}
+    60% {opacity: .6}
+    70% {opacity: .7}
+    80% {opacity: .8}
+    90% {opacity: .9}
     100% {opacity: 1}
 }
 
-.hovered-nine {
+.hovered-nine, .hovered-seven {
     display: block;
     animation-name: fade-in;
-    animation-duration: .4s;
-    transition: all .6s ease;
+    animation-duration: .8s;
+    transition: all .8s ease;
     opacity: 1;
 }
 
@@ -133,20 +145,33 @@
 }
 @keyframes drive-in-carrera {
     0% {left: -80px}
-    25% {left: -15px}
+    10% {left: -70px}
+    20% {left: -60px}
+    30% {left: -50px}
+    40% {left: -40px}
     50% {left: -30px}
-    75% {left: -5px}
+    60% {left: -20px}
+    70% {left: -10px}
+    80% {left: 0px}
+    90% {left: 10px}
     100% {left: 20px}
 
 }
 @keyframes drive-in-gts {
     0% {left: -80px}
-    25% {left: 15px}
+    10% {left: -42px}
+    20% {left: -4px}
+    30% {left: 34px}
+    40% {left: 72px}
     50% {left: 110px}
-    75% {left: 205px}
+    60% {left: 148px}
+    70% {left: 186px}
+    80% {left: 224px}
+    90% {left: 262px}
     100% {left: 300px}
 
 }
+
 @keyframes drive-in-turbo {
     0% {left: -80px}
     10% {left: -28px}
@@ -159,36 +184,103 @@
     80% {left: 336px}
     90% {left: 388px}
     100% {left: 440px}
-
 }
 
+@keyframes drive-in-cayman-gts {
+    0% {left: -80px}
+    10% {left: -34px}
+    20% {left: 12px}
+    30% {left: 58px}
+    40% {left: 104px}
+    50% {left: 159px}
+    60% {left: 196px}
+    70% {left: 242px}
+    80% {left: 288px}
+    90% {left: 334px}
+    100% {left: 380px}
+}
 
-.hovered-nine-for-carrera {
-    transition: all .4s ease;
+@keyframes drive-in-boxster-gts {
+    0% {left: -80px}
+    10% {left: -8px}
+    20% {left: 64px}
+    30% {left: 136px}
+    40% {left: 208px}
+    50% {left: 280px}
+    60% {left: 352px}
+    70% {left: 424px}
+    80% {left: 496px}
+    90% {left: 568px}
+    100% {left: 640px}
+}
+
+.hovered-seven-for-cayman {
+    transition: all .6s ease;
     animation-name: drive-in-carrera;
     animation-duration: .4s;
     left: 20px;
-
 }
-.hovered-nine-for-t {
-    transition: all .4s ease;
+
+.hovered-seven-for-cayman-gts {
+    transition: all .6s ease;
+    animation-name: drive-in-cayman-gts;
+    animation-duration: .4s;
+    left: 360px;
+}
+
+.hovered-seven-for-cayman-s {
+    transition: all .6s ease;
     animation-name: drive-in-t;
     animation-duration: .4s;
-    left: 160px;
-
+    left: 140px;
 }
-.hovered-nine-for-gts {
-    transition: all .4s ease;
+
+.hovered-seven-for-boxster {
+    transition: all .6s ease;
     animation-name: drive-in-gts;
     animation-duration: .4s;
-    left: 300px;
+    left: 280px;
+}
+
+.hovered-seven-for-boxster-gts {
+    transition: all .6s ease;
+    animation-name: drive-in-boxster-gts;
+    animation-duration: .4s;
+    left: 640px; 
+}
+
+.hovered-seven-for-boxster-s {
+    transition: all .6s ease;
+    animation-name: drive-in-turbo;
+    animation-duration: .4s;
+    left: 420px; 
+}
+
+.hovered-nine-for-carrera {
+    transition: all .6s ease;
+    animation-name: drive-in-carrera;
+    animation-duration: .4s;
+    left: 20px;
+}
+.hovered-nine-for-t {
+    transition: all .6s ease;
+    animation-name: drive-in-t;
+    animation-duration: .4s;
+    left: 140px;
+}
+
+.hovered-nine-for-gts {
+    transition: all .6s ease;
+    animation-name: drive-in-gts;
+    animation-duration: .4s;
+    left: 280px;
 
 }
 .hovered-nine-for-turbo {
-    transition: all .4s ease;
+    transition: all .6s ease;
     animation-name: drive-in-turbo;
     animation-duration: .4s;
-    left: 440px;
+    left: 420px;
 }
 
 .dropdown-cars-contain h2 {
@@ -231,7 +323,7 @@
 
 .nine-carrera {
     position: absolute;
-    transition: all .6s ease;
+    transition: all .6s ease-out;
 }
 
 .nine-t .car-image{
@@ -241,10 +333,20 @@
     background-image: url('../assets/911\ T.png')
 }
 
+.nine-t .gradient-border{
+    background: linear-gradient(to right, rgba(102,102,102,0) 0%, rgba(102,102,102,1) 100% );
+    height: 3px;
+    width: 285px;
+    position: absolute;
+    top: 74;
+    left: -45px;
+    content: '';
+}
+
 .nine-t {
     position: absolute;
     top: 120px;
-    transition: all .6s ease;
+    transition: all .6s ease-out;
 }
 
 .nine-gts .gradient-border{
@@ -266,7 +368,7 @@
 .nine-gts {
     position: absolute;
     top: 240px;
-    transition: all .6s ease;
+    transition: all .6s ease-out;
 }
 
 .nine-turbo .gradient-border{
@@ -288,10 +390,10 @@
 .nine-turbo {
     position: absolute;
     top: 360px;
-    transition: all .6s ease;
+    transition: all .6s ease-out;
 }
 
-.nine-t .gradient-border{
+.seven-cayman .gradient-border{
     background: linear-gradient(to right, rgba(102,102,102,0) 0%, rgba(102,102,102,1) 100% );
     height: 3px;
     width: 285px;
@@ -300,6 +402,128 @@
     left: -45px;
     content: '';
 }
+.seven-cayman .car-image{
+    height: 72px;
+    width: 245px;
+    background-size: contain;
+    background-image: url('../assets/718\ Cayman.png')
+}
+
+.seven-cayman {
+    position: absolute;
+    transition: all .6s ease-out;
+}
+
+.seven-cayman-gts .gradient-border{
+    background: linear-gradient(to right, rgba(102,102,102,0) 0%, rgba(102,102,102,1) 100% );
+    height: 3px;
+    width: 285px;
+    position: absolute;
+    top: 74;
+    left: -45px;
+    content: '';
+}
+.seven-cayman-gts .car-image{
+    height: 72px;
+    width: 245px;
+    background-size: contain;
+    background-image: url('../assets/718\ Cayman\ GTS.png')
+}
+
+.seven-cayman-gts {
+    position: absolute;
+    top: 40px;
+    transition: all .6s ease-out;
+}
+
+.seven-cayman-s .gradient-border{
+    background: linear-gradient(to right, rgba(102,102,102,0) 0%, rgba(102,102,102,1) 100% );
+    height: 3px;
+    width: 285px;
+    position: absolute;
+    top: 74;
+    left: -45px;
+    content: '';
+}
+.seven-cayman-s .car-image{
+    height: 72px;
+    width: 245px;
+    background-size: contain;
+    background-image: url('../assets/718\ Cayman\ S.png')
+}
+
+.seven-cayman-s {
+    position: absolute;
+    top: 120px;
+    transition: all .6s ease-out;
+}
+
+.seven-boxster .gradient-border{
+    background: linear-gradient(to right, rgba(102,102,102,0) 0%, rgba(102,102,102,1) 100% );
+    height: 3px;
+    width: 285px;
+    position: absolute;
+    top: 74;
+    left: -45px;
+    content: '';
+}
+.seven-boxster .car-image{
+    height: 72px;
+    width: 245px;
+    background-size: contain;
+    background-image: url('../assets/718\ Boxster.png')
+}
+
+.seven-boxster {
+    position: absolute;
+    top: 300px;
+    transition: all .6s ease-out;
+}
+
+.seven-boxster-s .gradient-border{
+    background: linear-gradient(to right, rgba(102,102,102,0) 0%, rgba(102,102,102,1) 100% );
+    height: 3px;
+    width: 285px;
+    position: absolute;
+    top: 74;
+    left: -45px;
+    content: '';
+}
+.seven-boxster-s .car-image{
+    height: 72px;
+    width: 245px;
+    background-size: contain;
+    background-image: url('../assets/718\ Boxster\ S.png')
+}
+
+.seven-boxster-s {
+    position: absolute;
+    top: 420px;
+    transition: all .6s ease-out;
+}
+
+.seven-boxster-gts .gradient-border{
+    background: linear-gradient(to right, rgba(102,102,102,0) 0%, rgba(102,102,102,1) 100% );
+    height: 3px;
+    width: 285px;
+    position: absolute;
+    top: 74;
+    left: -45px;
+    content: '';
+}
+.seven-boxster-gts .car-image{
+    height: 72px;
+    width: 245px;
+    background-size: contain;
+    background-image: url('../assets/718\ Boxster\ GTS.png')
+}
+
+.seven-boxster-gts {
+    position: absolute;
+    top: 340px;
+    transition: all .6s ease-out;
+}
+
 
 .dropdown-car-name svg{
     height: 11px;
