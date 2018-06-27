@@ -19,7 +19,7 @@ class Home extends Component {
 
 
     changeView(e){
-
+        
         this.state.oncePerWheel++;
     if(this.state.oncePerWheel % 2 === 0 && e.deltaY > 0){
         if(this.state.currPageIndex === this.state.currPage.length - 1){
@@ -44,7 +44,7 @@ class Home extends Component {
         return ( 
             <div style = {{position: 'relative', width: '100vw'}}>
             <Throttle time = "1500" handler = "onWheel">
-                <div onWheel = {(e) => this.changeView(e)} style = {{height: 'calc(100vh - 85px)', width: '100%', position: 'absolute'}}>
+                <div onWheel = {(e) => this.changeView(e)} style = {{height: 'calc(100vh - 85px)', width: '100%', position: 'absolute', zIndex: 10}}>
 
                 </div>
             </Throttle>
