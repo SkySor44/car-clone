@@ -19,6 +19,7 @@ class Home extends Component {
 
 
     changeView(e){
+
         this.state.oncePerWheel++;
     if(this.state.oncePerWheel % 2 === 0 && e.deltaY > 0){
         if(this.state.currPageIndex === this.state.currPage.length - 1){

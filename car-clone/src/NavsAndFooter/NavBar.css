@@ -82,12 +82,10 @@
 }
 
 .dropdown-nav div:first-of-type  {
-    color: white;
     font-size: 21px;
 }
 
 .dropdown-nav div:first-of-type:hover {
-    color: #d5001c;
     cursor: pointer;
 }
 
@@ -524,6 +522,34 @@
     transition: all .6s ease-out;
 }
 
+.car-section > a:hover > div:first-child {
+    transform: translateX(20px);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+
+}
+
+@keyframes svg-move {
+    25% {transform: translateX(-3px)}
+    50% {transform: translateX(0px)}
+    75% {transform: translateX(-3px)}
+    100% {transform: translateX(0px)}
+}
+
+.car-section > a > div:last-child:hover > svg {
+    animation: svg-move 2.25s infinite;
+    transition: all 2s ease-in-out;
+    cursor: pointer;
+}
+
+.car-section > a:hover > div:last-child > p {
+    color: #d5001c;
+    cursor: pointer;
+}
+
+.car-section > a > div:first-child {
+    transition: all .5s ease-in-out;
+}
 
 .dropdown-car-name svg{
     height: 11px;
