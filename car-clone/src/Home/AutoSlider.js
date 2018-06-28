@@ -22,7 +22,14 @@ class AutoSlider extends Component {
     }
 
     changeCar(start = 0){
-        if(start <= 13){
+        if(start === 0){
+            this.setState({
+                currentCar: this.state.carsArr[start]
+            })
+            start++;
+            this.changeCar(start); 
+        }
+       else if(start <= 13){
             setTimeout(() => {
                 this.setState({
                     currentCar: this.state.carsArr[start]
@@ -32,7 +39,7 @@ class AutoSlider extends Component {
                 // setTimeout(() => {
                 //     document.querySelector('.as-car-image')
                 // }, 1000)
-            }, 2000)
+            }, 1500)
         } else if (start === 14){
             this.props.changeToDrFn()
         } 
