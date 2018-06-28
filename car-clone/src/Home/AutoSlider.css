@@ -19,4 +19,15 @@
     vertical-align: baseline;
     background-size: 100% 100%;
     position: absolute;
+    z-index: 0;
+}
+
+.as-car-image {
+    min-height: 214px;
+    width: 740px;
+    background-size: cover;
+    position: absolute;
+    z-index: 2;
+    left: calc(50vw - 370px);
+    top: calc(50% - 187px)
 }

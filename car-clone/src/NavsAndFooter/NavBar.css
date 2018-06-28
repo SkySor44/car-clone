@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    z-index: 3;
+    z-index: 13;
     position: relative;
     background: white;
 
@@ -20,7 +20,7 @@
     position: absolute;
     top: -150vh;
     left: 0;
-    z-index: 2;
+    z-index: 12;
     margin-top: 83px;
     transition: all .5s ease;
     overflow-y: scroll;

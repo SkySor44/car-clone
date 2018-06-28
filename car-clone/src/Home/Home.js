@@ -11,12 +11,19 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            currPage: [<AutoSlider />, <DrPorsche />, <NineElevenIntro />, <SevenEighteenIntro />, <FirstTimeIntro />, <ManualSlider />],
+            currPage: [<AutoSlider changeToDrFn = {this.changeToDr}/>, <DrPorsche />, <NineElevenIntro />, <SevenEighteenIntro />, <FirstTimeIntro />, <ManualSlider />],
             currPageIndex: 0,
             oncePerWheel: 1
          }
     }
 
+    changeToDr = () => {
+        this.setState({
+            currPageIndex: 1
+        })
+    }
+
+    
 
     changeView(e){
         
