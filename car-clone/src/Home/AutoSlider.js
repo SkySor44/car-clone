@@ -11,7 +11,8 @@ class AutoSlider extends Component {
         super(props);
         this.state = { 
             carsArr: [caymanGts, carreraGts, carreraT, caymanS, boxsterGts, carreraGts, carreraT, caymanS, boxsterGts, carreraGts, carreraT, caymanS, boxsterGts, carreraGts],
-            currentCar: caymanGts
+            currentCar: caymanGts,
+            nextCar: carreraGts
          }
 
          this.changeCar = this.changeCar.bind(this)
@@ -24,7 +25,8 @@ class AutoSlider extends Component {
     changeCar(start = 0){
         if(start === 0){
             this.setState({
-                currentCar: this.state.carsArr[start]
+                currentCar: this.state.carsArr[start],
+                nextCar: this.state.carsArr[start + 1]
             })
             start++;
             this.changeCar(start); 
@@ -32,14 +34,13 @@ class AutoSlider extends Component {
        else if(start <= 13){
             setTimeout(() => {
                 this.setState({
-                    currentCar: this.state.carsArr[start]
+                    currentCar: this.state.carsArr[start],
+                    nextCar: this.state.carsArr[start + 1]
                 })
                 start++;
                 this.changeCar(start);
-                // setTimeout(() => {
-                //     document.querySelector('.as-car-image')
-                // }, 1000)
-            }, 1500)
+
+            }, 200)
         } else if (start === 14){
             this.props.changeToDrFn()
         } 
@@ -52,7 +53,9 @@ class AutoSlider extends Component {
 
         return ( 
             <div className = "auto-slider-contain">
-            <div className = "as-car-image" style = {{backgroundImage: `url("${this.state.currentCar}")`}}></div>
+            <div className = "as-car-image" style = {{backgroundImage: `url("${this.state.nextCar}")`}}>
+                <div className = "as-car-image" style = {{backgroundImage: `url("${this.state.currentCar}")`}}></div>
+            </div>
             <div className = "as-background-image"></div>
 
             //Maybe wrap current car image div in another div with a position of absolute and a z-index of 1 so it is behind current car div. Set its background image to the next car so when it scrolls in and out you can see the next car behind it.
